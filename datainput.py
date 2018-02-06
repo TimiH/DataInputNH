@@ -25,7 +25,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         self.saveMam.clicked.connect(self.saveMamData)
         self.saveSono.clicked.connect(self.saveSonoData)
         self.saveMrt.clicked.connect(self.saveMrtData)
-        self.nextButton.clicked.connect(self.handleButton)
+        self.nextButton.clicked.connect(self.restartButton)
         #allow data input into Histologie Combobox
         self.histo.setEditable(True)
 
@@ -57,6 +57,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         charakMrt = unicode(self.charakMrt.currentText()).encode("utf-8")
         sizeMrt = unicode(self.sizeMrt.text()).encode("utf-8")
         #Non Mass Enhancement
+        enhancementMrt = int(self.internMrt.isChecked())
         verteilungMrt = unicode(self.verteilungMrt.currentText()).encode("utf-8")
         musterMrt = unicode(self.musterMrt.currentText()).encode("utf-8")
         sizeMassMrt = unicode(self.sizeMassMrt.text()).encode("utf-8")
@@ -100,9 +101,9 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         values.append(strengthMrt)
         values.append(beidseitigMrt)
         #Befund
+        values.append(laterMrt)
         values.append(herdMrt)
         values.append(zweitMrt)
-        values.append(laterMrt)
         values.append(quadMrt)
         values.append(depthMrt)
         values.append(formMrt)
@@ -110,6 +111,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         values.append(charakMrt)
         values.append(sizeMrt)
         #Non Mass Enhancement
+        values.append(enhancementMrt)
         values.append(verteilungMrt)
         values.append(musterMrt)
         values.append(sizeMassMrt)
@@ -166,9 +168,9 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         parenLeft = unicode(self.parenLeftSono.currentText()).encode("utf-8")
         parenRight = unicode(self.parenRightSono.currentText()).encode("utf-8")
         #Befund
+        laterSono = unicode(self.laterSono.currentText()).encode("utf-8")
         herdSono = int(self.herdSono.isChecked())
         zweitSono = int(self.zweitSono.isChecked())
-        laterSono = unicode(self.laterSono.currentText()).encode("utf-8")
         quadSono = unicode(self.quadSono.currentText()).encode("utf-8")
         orientSono = unicode(self.orientSono.currentText()).encode("utf-8")
         formSono = unicode(self.formSono.currentText()).encode("utf-8")
@@ -333,9 +335,9 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         values.append(parenLeft)
         values.append(parenRight)
         #Befund
+        values.append(laterMam)
         values.append(herdMam)
         values.append(zweitMam)
-        values.append(laterMam)
         values.append(quadMam)
         values.append(depthMam)
         values.append(formMam)
@@ -368,7 +370,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         df = df.append(newRow)
         df.to_excel(fnameMammo, index=False, header = 1,encoding='utf-8')
 
-    def handleButton(self):
+    def restartButton(self):
         try:
             subprocess.Popen([sys.executable, FILEPATH])
         except OSError as exception:

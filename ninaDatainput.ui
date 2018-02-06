@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2056</width>
+    <width>1826</width>
     <height>1234</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
+    <width>1826</width>
     <height>16777215</height>
    </size>
   </property>
@@ -149,6 +149,12 @@
         <verstretch>5</verstretch>
        </sizepolicy>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>1800</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="autoFillBackground">
        <bool>false</bool>
       </property>
@@ -195,20 +201,6 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QCheckBox" name="herdMam">
-              <property name="text">
-               <string>Herdläsion</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QCheckBox" name="zweitMam">
-              <property name="text">
-               <string>Zweitäsion</string>
-              </property>
-             </widget>
-            </item>
             <item row="2" column="0">
              <widget class="QLabel" name="label_8">
               <property name="text">
@@ -230,14 +222,14 @@
               </item>
              </widget>
             </item>
-            <item row="3" column="0">
+            <item row="5" column="0">
              <widget class="QLabel" name="label_9">
               <property name="text">
                <string>Quadrant</string>
               </property>
              </widget>
             </item>
-            <item row="3" column="1">
+            <item row="5" column="1">
              <widget class="QComboBox" name="quadMam">
               <item>
                <property name="text">
@@ -261,14 +253,14 @@
               </item>
              </widget>
             </item>
-            <item row="4" column="0">
+            <item row="6" column="0">
              <widget class="QLabel" name="tiefeDrittelLabel">
               <property name="text">
                <string>Tiefe (Drittel)</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="6" column="1">
              <widget class="QComboBox" name="depthMam">
               <item>
                <property name="text">
@@ -287,14 +279,14 @@
               </item>
              </widget>
             </item>
-            <item row="5" column="0">
+            <item row="7" column="0">
              <widget class="QLabel" name="label_10">
               <property name="text">
                <string>Form</string>
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
+            <item row="7" column="1">
              <widget class="QComboBox" name="formMam">
               <item>
                <property name="text">
@@ -313,14 +305,14 @@
               </item>
              </widget>
             </item>
-            <item row="6" column="0">
+            <item row="8" column="0">
              <widget class="QLabel" name="randLabel">
               <property name="text">
                <string>Rand</string>
               </property>
              </widget>
             </item>
-            <item row="6" column="1">
+            <item row="8" column="1">
              <widget class="QComboBox" name="randMam">
               <item>
                <property name="text">
@@ -349,14 +341,14 @@
               </item>
              </widget>
             </item>
-            <item row="7" column="0">
+            <item row="9" column="0">
              <widget class="QLabel" name="dichteLabel">
               <property name="text">
                <string>Dichte</string>
               </property>
              </widget>
             </item>
-            <item row="7" column="1">
+            <item row="9" column="1">
              <widget class="QComboBox" name="dichteMam">
               <item>
                <property name="text">
@@ -380,15 +372,29 @@
               </item>
              </widget>
             </item>
-            <item row="8" column="0">
+            <item row="10" column="0">
              <widget class="QLabel" name="grELabel">
               <property name="text">
                <string>Größe (-x-x-x mm)</string>
               </property>
              </widget>
             </item>
-            <item row="8" column="1">
+            <item row="10" column="1">
              <widget class="QLineEdit" name="sizeMam"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QCheckBox" name="zweitMam">
+              <property name="text">
+               <string>Zweitäsion</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QCheckBox" name="herdMam">
+              <property name="text">
+               <string>Herdläsion</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -1330,6 +1336,9 @@
         </item>
         <item row="2" column="0">
          <layout class="QFormLayout" name="formLayout_9">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
           <property name="verticalSpacing">
            <number>9</number>
           </property>
@@ -1341,27 +1350,13 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="herdSono">
-            <property name="text">
-             <string>Herdläsion</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="zweitSono">
-            <property name="text">
-             <string>Zweitäsion</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
            <widget class="QLabel" name="label_19">
             <property name="text">
              <string>Lateralität</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="1" column="1">
            <widget class="QComboBox" name="laterSono">
             <item>
              <property name="text">
@@ -1373,6 +1368,20 @@
               <string>Links</string>
              </property>
             </item>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="herdSono">
+            <property name="text">
+             <string>Herdläsion</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="zweitSono">
+            <property name="text">
+             <string>Zweitäsion</string>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
@@ -1537,16 +1546,6 @@
             </property>
            </widget>
           </item>
-          <item row="9" column="0">
-           <widget class="QLabel" name="grELabel_2">
-            <property name="text">
-             <string>Größe (-x-x-x mm)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="1">
-           <widget class="QLineEdit" name="sizeSono"/>
-          </item>
           <item row="8" column="1">
            <widget class="QComboBox" name="postSono">
             <item>
@@ -1570,6 +1569,16 @@
              </property>
             </item>
            </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="grELabel_2">
+            <property name="text">
+             <string>Größe (-x-x-x mm)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QLineEdit" name="sizeSono"/>
           </item>
          </layout>
         </item>
@@ -1817,20 +1826,6 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QCheckBox" name="herdMrt">
-            <property name="text">
-             <string>Herdläsion</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="zweitMrt">
-            <property name="text">
-             <string>Zweitäsion</string>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_37">
             <property name="text">
@@ -1852,14 +1847,14 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="label_38">
             <property name="text">
              <string>Quadrant</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="quadMrt">
             <item>
              <property name="text">
@@ -1883,14 +1878,14 @@
             </item>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="tiefeDrittelLabel_2">
             <property name="text">
              <string>Tiefe (Drittel)</string>
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="5" column="1">
            <widget class="QComboBox" name="depthMrt">
             <item>
              <property name="text">
@@ -1909,14 +1904,14 @@
             </item>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="label_39">
             <property name="text">
              <string>Form</string>
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="6" column="1">
            <widget class="QComboBox" name="formMrt">
             <item>
              <property name="text">
@@ -1935,14 +1930,14 @@
             </item>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="7" column="0">
            <widget class="QLabel" name="randLabel_3">
             <property name="text">
              <string>Rand</string>
             </property>
            </widget>
           </item>
-          <item row="6" column="1">
+          <item row="7" column="1">
            <widget class="QComboBox" name="randMrt">
             <item>
              <property name="text">
@@ -1961,14 +1956,14 @@
             </item>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="8" column="0">
            <widget class="QLabel" name="dichteLabel_2">
             <property name="text">
              <string>Inneren Enhancements</string>
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
+          <item row="8" column="1">
            <widget class="QComboBox" name="charakMrt">
             <item>
              <property name="text">
@@ -1992,182 +1987,28 @@
             </item>
            </widget>
           </item>
-          <item row="8" column="0">
+          <item row="9" column="0">
            <widget class="QLabel" name="grELabel_3">
             <property name="text">
              <string>Größe (-x-x-x mm)</string>
             </property>
            </widget>
           </item>
-          <item row="8" column="1">
+          <item row="9" column="1">
            <widget class="QLineEdit" name="sizeMrt"/>
           </item>
-         </layout>
-        </item>
-        <item row="1" column="1">
-         <layout class="QFormLayout" name="formLayout_19">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_40">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-              <underline>true</underline>
-             </font>
-            </property>
-            <property name="text">
-             <string>Non Mass Enhancement</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="verteilungLabel_2">
-            <property name="text">
-             <string>Verteilung</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="verteilungMrt">
-            <item>
-             <property name="text">
-              <string>fokal</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>linear</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>segmental</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>regional</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>multiple Regionen</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>diffus</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="musterDesEnhancementLabel">
-            <property name="text">
-             <string>Muster des Enhancement</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="musterMrt">
-            <item>
-             <property name="text">
-              <string>homogen</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>heterogen</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>gruppiert</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>ringförmig gruppiert</string>
-             </property>
-            </item>
-           </widget>
-          </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="grEXXXMmLabel">
+           <widget class="QCheckBox" name="herdMrt">
             <property name="text">
-             <string>Größe (-x-x-x mm)</string>
+             <string>Herdläsion</string>
             </property>
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="sizeMassMrt"/>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_41">
+           <widget class="QCheckBox" name="zweitMrt">
             <property name="text">
-             <string>Kinetic Kurve SI-Zeit Kurve</string>
+             <string>Zweitäsion</string>
             </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="initialPhaseLabel">
-            <property name="text">
-             <string>InitialPhase</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QComboBox" name="initialMrt">
-            <item>
-             <property name="text">
-              <string>Keine Angabe</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Langsam</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Mittel</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Schnell</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="spTphaseLabel">
-            <property name="text">
-             <string>Spätphase</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <widget class="QComboBox" name="lateMrt">
-            <item>
-             <property name="text">
-              <string>Keine Angabe</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>kontinuierlich</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Plateau</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Washout</string>
-             </property>
-            </item>
            </widget>
           </item>
          </layout>
@@ -2695,6 +2536,192 @@
           </item>
          </layout>
         </item>
+        <item row="1" column="1">
+         <widget class="QFrame" name="">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QFormLayout" name="formLayout_19">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_40">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <underline>true</underline>
+              </font>
+             </property>
+             <property name="text">
+              <string>Non Mass Enhancement</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="verteilungLabel_2">
+             <property name="text">
+              <string>Verteilung</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="verteilungMrt">
+             <item>
+              <property name="text">
+               <string>fokal</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>linear</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>segmental</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>regional</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>multiple Regionen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>diffus</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="musterDesEnhancementLabel">
+             <property name="text">
+              <string>Muster des Enhancement</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="musterMrt">
+             <item>
+              <property name="text">
+               <string>homogen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>heterogen</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>gruppiert</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ringförmig gruppiert</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="grEXXXMmLabel">
+             <property name="text">
+              <string>Größe (-x-x-x mm)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="sizeMassMrt"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>Kinetic Kurve SI-Zeit Kurve</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="initialPhaseLabel">
+             <property name="text">
+              <string>InitialPhase</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QComboBox" name="initialMrt">
+             <item>
+              <property name="text">
+               <string>Keine Angabe</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Langsam</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mittel</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Schnell</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="spTphaseLabel">
+             <property name="text">
+              <string>Spätphase</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QComboBox" name="lateMrt">
+             <item>
+              <property name="text">
+               <string>Keine Angabe</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>kontinuierlich</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Plateau</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Washout</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="enhancementVorhandenLabel">
+             <property name="text">
+              <string>Enhancement vorhanden?</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="enhancementMrt"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
        </layout>
       </widget>
      </widget>
@@ -2706,7 +2733,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2056</width>
+     <width>1826</width>
      <height>31</height>
     </rect>
    </property>
