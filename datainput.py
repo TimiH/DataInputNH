@@ -293,7 +293,7 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         formMam = unicode(self.formMam.currentText()).encode("utf-8")
         randMam = unicode(self.randMam.currentText()).encode("utf-8")
         dichteMam = unicode(self.dichteMam.currentText()).encode("utf-8")
-        sizeMam =  unicode(self.nname.text()).encode("utf-8")
+        sizeMam =  unicode(self.sizeMam.text()).encode("utf-8")
         #Verkalkung
         kalkMam = int(self.kalkMam.isChecked())
         typischMam = int(self.typischMam.isChecked())

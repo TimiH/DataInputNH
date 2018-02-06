@@ -71,12 +71,22 @@
            <widget class="QComboBox" name="histo">
             <item>
              <property name="text">
-              <string>Dummy</string>
+              <string>NST</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>DUMMy2</string>
+              <string>NST/DCIS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>DCIS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Invasiv Lobulär</string>
              </property>
             </item>
            </widget>
