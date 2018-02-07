@@ -222,9 +222,9 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         values.append(parenLeft)
         values.append(parenRight)
         #Befund
+        values.append(laterSono)
         values.append(herdSono)
         values.append(zweitSono)
-        values.append(laterSono)
         values.append(quadSono)
         values.append(formSono)
         values.append(orientSono)
