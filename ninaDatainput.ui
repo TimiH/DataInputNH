@@ -151,7 +151,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>1800</width>
+        <width>1600</width>
         <height>16777215</height>
        </size>
       </property>
@@ -159,7 +159,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Mammografie">
        <property name="sizePolicy">
@@ -488,6 +488,12 @@
         </item>
         <item row="2" column="1">
          <widget class="QFrame" name="formFrame_3">
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="autoFillBackground">
            <bool>true</bool>
           </property>
@@ -681,7 +687,7 @@
              </item>
              <item>
               <property name="text">
-               <string>IV benign</string>
+               <string>IV suspekt</string>
               </property>
              </item>
              <item>
@@ -1056,7 +1062,7 @@
            </item>
            <item>
             <property name="text">
-             <string>IV benign</string>
+             <string>IV Supsekt</string>
             </property>
            </item>
            <item>
@@ -2064,7 +2070,7 @@
            </item>
            <item>
             <property name="text">
-             <string>IV benign</string>
+             <string>IV suspekt</string>
             </property>
            </item>
            <item>
@@ -2537,7 +2543,7 @@
          </layout>
         </item>
         <item row="1" column="1">
-         <widget class="QFrame" name="">
+         <widget class="QFrame" name="frame">
           <property name="maximumSize">
            <size>
             <width>600</width>
